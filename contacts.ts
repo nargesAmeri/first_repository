@@ -3,6 +3,7 @@
 const contact_number= { name:"", phone:""};
 const contact_list=[];
 
+
 function addContact(name:string, phone:string){
     const contactList=Object.create(contact_number);
     contactList.name=name;
@@ -15,8 +16,16 @@ addContact("arad", "02168568451");
 console.log(contact_list);
 
 function SearchContact(s){
+    
     let g = contact_list.find(o => o.name === s);
-    console.log(g);
+    let i=g;
+    
+    if(i==undefined){
+        console.log("does not exist");
+    }
+    else{
+        console.log(g);
+    }
     }
 
    
